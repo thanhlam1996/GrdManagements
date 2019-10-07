@@ -1,0 +1,525 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E7B7094C-8D32-4B0D-9E3D-E561587F0026}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CommonLib</RootNamespace>
+    <AssemblyName>CommonLib</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Shared.v7.3, Version=7.3.20073.38, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Win.Misc.v7.3, Version=7.3.20073.38, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Win.UltraWinEditors.v7.3, Version=7.3.20073.38, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics2.Win.UltraWinGrid.v7.3, Version=7.3.20073.38, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Win.v7.3, Version=7.3.20073.38, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="SpreadsheetGear, Version=6.0.3.151, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\DLL_Module\SpreadsheetGear.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseObject.cs" />
+    <Compile Include="BasePscUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Buttons\btnCloseNoImg.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Buttons\btnDown.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Buttons\btnOK.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Buttons\btnUp.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Buttons\pscButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Constants.cs" />
+    <Compile Include="dxfrmExtend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dxfrmExtend.designer.cs">
+      <DependentUpon>dxfrmExtend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExcelBL.cs" />
+    <Compile Include="FormInputValue\frmChooseColumnFilters.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInputValue\frmChooseColumnFilters.Designer.cs">
+      <DependentUpon>frmChooseColumnFilters.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormInputValue\frmInputs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInputValue\frmInputs.designer.cs">
+      <DependentUpon>frmInputs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormInputValue\frmReplace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInputValue\frmReplace.Designer.cs">
+      <DependentUpon>frmReplace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormInputValue\frmReplaceGrid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInputValue\frmReplaceGrid.Designer.cs">
+      <DependentUpon>frmReplaceGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormInputValue\frmViewDataSource.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInputValue\frmViewDataSource.Designer.cs">
+      <DependentUpon>frmViewDataSource.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPscForms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPscForms.Designer.cs">
+      <DependentUpon>frmPscForms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBorderLess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBorderLess.Designer.cs">
+      <DependentUpon>frmBorderLess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuickType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuickType.Designer.cs">
+      <DependentUpon>frmQuickType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Functions.cs" />
+    <Compile Include="GlobalLib.cs" />
+    <Compile Include="HotKeyController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ImportAndExport\AnalyzeControlToDataSet.cs" />
+    <Compile Include="ImportAndExport\DefineColumns.cs" />
+    <Compile Include="ImportAndExport\frmChooseFolderImport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportAndExport\frmChooseFolderImport.Designer.cs">
+      <DependentUpon>frmChooseFolderImport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportAndExport\frmEditConstructImportEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportAndExport\frmEditConstructImportEdit.Designer.cs">
+      <DependentUpon>frmEditConstructImportEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportAndExport\frmImportAndExportData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportAndExport\frmImportAndExportData.Designer.cs">
+      <DependentUpon>frmImportAndExportData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportAndExport\frmMapColumn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportAndExport\frmMapColumn.Designer.cs">
+      <DependentUpon>frmMapColumn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportAndExport\frmMessageString.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportAndExport\frmMessageString.Designer.cs">
+      <DependentUpon>frmMessageString.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportAndExport\frmQConvertFontImport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportAndExport\frmQConvertFontImport.Designer.cs">
+      <DependentUpon>frmQConvertFontImport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReadDBF.cs" />
+    <Compile Include="ImportAndExport\frmExportToExcel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportAndExport\frmExportToExcel.designer.cs">
+      <DependentUpon>frmExportToExcel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportAndExport\frmImportFromExcel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportAndExport\frmImportFromExcel.designer.cs">
+      <DependentUpon>frmImportFromExcel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportAndExport\frmStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportAndExport\frmStatus.Designer.cs">
+      <DependentUpon>frmStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherControls\txtNumber.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="OtherControls\txtSearch.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SystemConfig.cs" />
+    <Compile Include="UserControls\ActiveActions.cs" />
+    <Compile Include="UserControls\CalendarEditingControl.cs" />
+    <Compile Include="UserControls\CheckBoxOnHeader.cs" />
+    <Compile Include="UserControls\ComboBoxEntend.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\CustomPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\DataGridViewExtend.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\DynamicPanels.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\DynamicPanels.designer.cs">
+      <DependentUpon>DynamicPanels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\frmVisibleColumns.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControls\frmVisibleColumns.designer.cs">
+      <DependentUpon>frmVisibleColumns.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\LookUpEditExt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\PopupControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\PopupControl.Designer.cs">
+      <DependentUpon>PopupControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\TabControlExtend.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="uctChooseFilterGrids.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uctChooseFilterGrids.designer.cs">
+      <DependentUpon>uctChooseFilterGrids.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\txtSupportQuickSearch.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\uctPopupControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\uctPopupControl.Designer.cs">
+      <DependentUpon>uctPopupControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\uctSearchDics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControls\uctSearchDics.Designer.cs">
+      <DependentUpon>uctSearchDics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\uctTwoGrids.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\uctTwoGrids.designer.cs">
+      <DependentUpon>uctTwoGrids.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\XtraGridExtend.cs">
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\113.GIF" />
+    <None Include="Resources\113.png" />
+    <None Include="Resources\114.GIF" />
+    <None Include="Resources\114.png" />
+    <None Include="Resources\172.gif" />
+    <None Include="Resources\176.gif" />
+    <None Include="Resources\253.gif" />
+    <None Include="Resources\296.gif" />
+    <None Include="Resources\330.gif" />
+    <None Include="Resources\announce.GIF" />
+    <Content Include="Resources\announce.ico" />
+    <None Include="Resources\announce.png" />
+    <None Include="Resources\ButtonClose.png" />
+    <None Include="Resources\ButtonCloseOver.png" />
+    <None Include="Resources\ButtonHelp.png" />
+    <None Include="Resources\ButtonMaximize.png" />
+    <None Include="Resources\ButtonMaximizeOver.png" />
+    <None Include="Resources\ButtonMinimize.png" />
+    <None Include="Resources\ButtonMinimizeOver.png" />
+    <None Include="Resources\ButtonNormal.png" />
+    <None Include="Resources\ButtonNormalOver.png" />
+    <None Include="Resources\createfilter.png" />
+    <None Include="Resources\dollar.png" />
+    <None Include="Resources\Exit_32.png" />
+    <None Include="Resources\file16x16 24-bit.png" />
+    <None Include="Resources\file.png" />
+    <None Include="Resources\file_copy.png" />
+    <None Include="Resources\filter.png" />
+    <None Include="Resources\form.png" />
+    <None Include="Resources\help.gif" />
+    <None Include="Resources\hspace-increase.gif" />
+    <None Include="Resources\down.png" />
+    <None Include="Resources\dropdown.png" />
+    <None Include="Resources\arrow_down.png" />
+    <None Include="Resources\arrow-down.png" />
+    <None Include="Resources\close.png" />
+    <None Include="Resources\find.png" />
+    <None Include="Resources\file_new.png" />
+    <None Include="Resources\Exit.png" />
+    <None Include="Resources\excel.gif" />
+    <Content Include="Resources\iconApp.ico" />
+    <None Include="Resources\unlock.png" />
+    <None Include="Resources\save1.png" />
+    <None Include="Resources\save-alt.png" />
+    <None Include="Resources\printer.png" />
+    <None Include="Resources\print.png" />
+    <None Include="Resources\igsch_o2003hover.gif" />
+    <None Include="Resources\ig_cmboDownXP2.png" />
+    <None Include="Resources\keypress.png" />
+    <None Include="Resources\keynotpress.png" />
+    <None Include="Resources\refresh.png" />
+    <None Include="Resources\sucess.png" />
+    <None Include="Resources\xmlicon.png" />
+    <None Include="Resources\xls.png" />
+    <None Include="Resources\ico_alpha_Delete_16x16.png" />
+    <None Include="Resources\ico_alpha_Delete_24x24.png" />
+    <None Include="Resources\move to16x16 24-bit.png" />
+    <None Include="Resources\page_down.gif" />
+    <None Include="Resources\page_up.gif" />
+    <None Include="Resources\printer.gif" />
+    <None Include="Resources\refresh.gif" />
+    <None Include="Resources\Refresh_Green.png" />
+    <None Include="Resources\remove.png" />
+    <None Include="Resources\save.png" />
+    <None Include="Resources\tableprop.gif" />
+    <None Include="Resources\title2.gif" />
+    <None Include="Resources\title.gif" />
+    <None Include="Resources\view3.png" />
+    <None Include="Resources\view.png" />
+    <None Include="Resources\_116.png" />
+    <None Include="Resources\_1161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Thumbs.db" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Buttons\btnDown.resx">
+      <DependentUpon>btnDown.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Buttons\btnUp.resx">
+      <DependentUpon>btnUp.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Buttons\pscButton.resx">
+      <DependentUpon>pscButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dxfrmExtend.resx">
+      <DependentUpon>dxfrmExtend.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInputValue\frmChooseColumnFilters.resx">
+      <DependentUpon>frmChooseColumnFilters.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInputValue\frmInputs.resx">
+      <DependentUpon>frmInputs.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInputValue\frmReplace.resx">
+      <DependentUpon>frmReplace.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInputValue\frmReplaceGrid.resx">
+      <DependentUpon>frmReplaceGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInputValue\frmViewDataSource.resx">
+      <DependentUpon>frmViewDataSource.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPscForms.resx">
+      <DependentUpon>frmPscForms.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBorderLess.resx">
+      <DependentUpon>frmBorderLess.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuickType.resx">
+      <DependentUpon>frmQuickType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportAndExport\frmChooseFolderImport.resx">
+      <DependentUpon>frmChooseFolderImport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportAndExport\frmEditConstructImportEdit.resx">
+      <DependentUpon>frmEditConstructImportEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportAndExport\frmExportToExcel.resx">
+      <DependentUpon>frmExportToExcel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportAndExport\frmImportAndExportData.resx">
+      <DependentUpon>frmImportAndExportData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportAndExport\frmImportFromExcel.resx">
+      <DependentUpon>frmImportFromExcel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportAndExport\frmMapColumn.resx">
+      <DependentUpon>frmMapColumn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportAndExport\frmMessageString.resx">
+      <DependentUpon>frmMessageString.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportAndExport\frmQConvertFontImport.resx">
+      <DependentUpon>frmQConvertFontImport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportAndExport\frmStatus.resx">
+      <DependentUpon>frmStatus.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ComboBoxEntend.resx">
+      <DependentUpon>ComboBoxEntend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\CustomPanel.resx">
+      <DependentUpon>CustomPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\DataGridViewExtend.resx">
+      <DependentUpon>DataGridViewExtend.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\DynamicPanels.resx">
+      <DependentUpon>DynamicPanels.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\frmVisibleColumns.resx">
+      <DependentUpon>frmVisibleColumns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\PopupControl.resx">
+      <DependentUpon>PopupControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uctChooseFilterGrids.resx">
+      <DependentUpon>uctChooseFilterGrids.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\uctPopupControl.resx">
+      <DependentUpon>uctPopupControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\uctSearchDics.resx">
+      <DependentUpon>uctSearchDics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\uctTwoGrids.resx">
+      <DependentUpon>uctTwoGrids.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\XtraGridExtend.resx">
+      <DependentUpon>XtraGridExtend.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

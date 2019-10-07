@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3B29E214-A338-4925-A249-070F2624BEBB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GrdCore</RootNamespace>
+    <AssemblyName>GrdCore</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\BL_PhoiBang.cs" />
+    <Compile Include="BLL\BL_Reports.cs" />
+    <Compile Include="BLL\BL_ChungChi.cs" />
+    <Compile Include="BLL\BL_DecentralizationManagements.cs" />
+    <Compile Include="BLL\BL_DoiTuongPhanQuyen.cs" />
+    <Compile Include="BLL\BL_HeThong.cs" />
+    <Compile Include="BLL\BL_InBang.cs" />
+    <Compile Include="BLL\BL_Decision.cs" />
+    <Compile Include="BLL\ExcelBL.cs" />
+    <Compile Include="DAL\DACommon.cs" />
+    <Compile Include="DAL\DataAccessHelper.cs" />
+    <Compile Include="DAL\DA_PhoiBang.cs" />
+    <Compile Include="DAL\DA_Reports.cs" />
+    <Compile Include="DAL\DA_ChungChi.cs" />
+    <Compile Include="DAL\DA_DecentralizationManagements.cs" />
+    <Compile Include="DAL\DA_HeThong.cs" />
+    <Compile Include="DAL\DA_InBang.cs" />
+    <Compile Include="DAL\DA_Decision.cs" />
+    <Compile Include="DAL\DA_DoiTuongPhanQuyen.cs" />
+    <Compile Include="DAL_Second\DA_DoiTuongPhanQuyen.cs" />
+    <Compile Include="Entities\Decisions.cs" />
+    <Compile Include="Entities\Reports.cs" />
+    <Compile Include="Entities\ReportTemplates.cs" />
+    <Compile Include="Entities\Staffs.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Provider.cs" />
+    <Compile Include="SqlHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CommonLib\CommonLib.csproj">
+      <Project>{e7b7094c-8d32-4b0d-9e3d-e561587f0026}</Project>
+      <Name>CommonLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

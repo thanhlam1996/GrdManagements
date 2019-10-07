@@ -1,0 +1,3 @@
+D:\ThanhLam\source\VangBangSVN\GrdManagements\obj\Debug\GrdManagements.csprojResolveAssemblyReference.cache
+D:\ThanhLam\source\VangBangSVN\GrdManagements\obj\Debug\GrdManagements.Properties.Resources.resources
+D:\ThanhLam\source\VangBangSVN\GrdManagements\obj\Debug\GrdManagements.csproj.GenerateResource.Cache

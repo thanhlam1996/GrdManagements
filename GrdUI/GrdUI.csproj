@@ -1,0 +1,869 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9F773D73-8B9A-4FA0-9B7A-0ED63B747E0A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GrdUI</RootNamespace>
+    <AssemblyName>GrdUI</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="DevExpress.BonusSkins.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL_Module\DevExpress.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\DevExpress 15.2\Components\Bin\Framework\DevExpress.Office.v15.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Pdf.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v15.2.Drawing, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\DevExpress 15.2\Components\Bin\Framework\DevExpress.RichEdit.v15.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Charts.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v15.2.Wizard, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v15.2.UI, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v15.2.Extensions, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DevExpress.XtraRichEdit.v15.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Input.Manipulations" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChungChi\Class_SinhVienNoSach.cs" />
+    <Compile Include="ChungChi\Class_URLThuVien.cs" />
+    <Compile Include="ChungChi\frmChiTietDiem_XetTotNghiep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChungChi\frmChiTietDiem_XetTotNghiep.designer.cs">
+      <DependentUpon>frmChiTietDiem_XetTotNghiep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChungChi\frmSoQuyetDinh_ReportPhoiBang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChungChi\frmSoQuyetDinh_ReportPhoiBang.designer.cs">
+      <DependentUpon>frmSoQuyetDinh_ReportPhoiBang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChungChi\frm_Grd_DanhSachSinhVienDotXet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChungChi\frm_Grd_DanhSachSinhVienDotXet.designer.cs">
+      <DependentUpon>frm_Grd_DanhSachSinhVienDotXet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChungChi\frm_Grd_ChuongTrinhDaoTao_TheoKhoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChungChi\frm_Grd_ChuongTrinhDaoTao_TheoKhoa.designer.cs">
+      <DependentUpon>frm_Grd_ChuongTrinhDaoTao_TheoKhoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChungChi\frm_Grd_DS_SinhVienTotNghiep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChungChi\frm_Grd_DS_SinhVienTotNghiep.Designer.cs">
+      <DependentUpon>frm_Grd_DS_SinhVienTotNghiep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChungChi\frm_Grd_ImportExcel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChungChi\frm_Grd_ImportExcel.designer.cs">
+      <DependentUpon>frm_Grd_ImportExcel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChungChi\frm_Grd_Lop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChungChi\frm_Grd_Lop.designer.cs">
+      <DependentUpon>frm_Grd_Lop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChungChi\frm_Grd_ChuongTrinhDaoTao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChungChi\frm_Grd_ChuongTrinhDaoTao.designer.cs">
+      <DependentUpon>frm_Grd_ChuongTrinhDaoTao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChungChi\frm_Grd_DSSinhVienNopHoSoChungChi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChungChi\frm_Grd_DSSinhVienNopHoSoChungChi.designer.cs">
+      <DependentUpon>frm_Grd_DSSinhVienNopHoSoChungChi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChungChi\frm_Grd_TaoChuanXetNhanh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChungChi\frm_Grd_TaoChuanXetNhanh.Designer.cs">
+      <DependentUpon>frm_Grd_TaoChuanXetNhanh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChungChi\frm_Grd_ChungChiNopThayThe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChungChi\frm_Grd_ChungChiNopThayThe.designer.cs">
+      <DependentUpon>frm_Grd_ChungChiNopThayThe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChungChi\frm_Grd_ThongTinSinhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChungChi\frm_Grd_ThongTinSinhVien.designer.cs">
+      <DependentUpon>frm_Grd_ThongTinSinhVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChungChi\frmPRJThongTinNhomTuChonDiaLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChungChi\frmPRJThongTinNhomTuChonDiaLog.Designer.cs">
+      <DependentUpon>frmPRJThongTinNhomTuChonDiaLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChungChi\frmSoQuyetDinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChungChi\frmSoQuyetDinh.designer.cs">
+      <DependentUpon>frmSoQuyetDinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChungChi\frm_Grd_CapNhatThangXepLoai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChungChi\frm_Grd_CapNhatThangXepLoai.designer.cs">
+      <DependentUpon>frm_Grd_CapNhatThangXepLoai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChungChi\frm_Grd_ChonChuanXeCopy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChungChi\frm_Grd_ChonChuanXeCopy.Designer.cs">
+      <DependentUpon>frm_Grd_ChonChuanXeCopy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChungChi\frm_Grd_ChonChuanXet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChungChi\frm_Grd_ChonChuanXet.Designer.cs">
+      <DependentUpon>frm_Grd_ChonChuanXet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChungChi\frm_Grd_ChuanXet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChungChi\frm_Grd_ChuanXet.designer.cs">
+      <DependentUpon>frm_Grd_ChuanXet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChungChi\frm_Grd_DanhMucLoaiChungChi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChungChi\frm_Grd_DanhMucLoaiChungChi.Designer.cs">
+      <DependentUpon>frm_Grd_DanhMucLoaiChungChi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChungChi\frm_Grd_DieuKienXet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChungChi\frm_Grd_DieuKienXet.Designer.cs">
+      <DependentUpon>frm_Grd_DieuKienXet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChungChi\frm_Grd_DotXet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChungChi\frm_Grd_DotXet.Designer.cs">
+      <DependentUpon>frm_Grd_DotXet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChungChi\frm_Grd_NopHoSoChungChi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChungChi\frm_Grd_NopHoSoChungChi.designer.cs">
+      <DependentUpon>frm_Grd_NopHoSoChungChi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChungChi\frm_Grd_SoChuanXetDat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChungChi\frm_Grd_SoChuanXetDat.Designer.cs">
+      <DependentUpon>frm_Grd_SoChuanXetDat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChungChi\frm_Grd_ThangXepLoaiChiTiet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChungChi\frm_Grd_ThangXepLoaiChiTiet.designer.cs">
+      <DependentUpon>frm_Grd_ThangXepLoaiChiTiet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChungChi\frm_Grd_XetTotNghiep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChungChi\frm_Grd_XetTotNghiep.Designer.cs">
+      <DependentUpon>frm_Grd_XetTotNghiep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChungChi\frm_Grd_ChoThucThi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChungChi\frm_Grd_ChoThucThi.Designer.cs">
+      <DependentUpon>frm_Grd_ChoThucThi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonFunctions.cs" />
+    <Compile Include="frm_Grd_ConnectDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Grd_ConnectDatabase.Designer.cs">
+      <DependentUpon>frm_Grd_ConnectDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HeThong\frm_Grd_CotHienThi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HeThong\frm_Grd_CotHienThi.designer.cs">
+      <DependentUpon>frm_Grd_CotHienThi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HeThong\frm_Grd_CauHinhModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HeThong\frm_Grd_CauHinhModule.Designer.cs">
+      <DependentUpon>frm_Grd_CauHinhModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HeThong\frm_Grd_DongDauKyTen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HeThong\frm_Grd_DongDauKyTen.designer.cs">
+      <DependentUpon>frm_Grd_DongDauKyTen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HeThong\frm_Grd_DoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HeThong\frm_Grd_DoiMatKhau.Designer.cs">
+      <DependentUpon>frm_Grd_DoiMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HeThong\frm_Grd_DoiNamHocHocKy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HeThong\frm_Grd_DoiNamHocHocKy.designer.cs">
+      <DependentUpon>frm_Grd_DoiNamHocHocKy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HeThong\frm_Grd_ImportExcel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HeThong\frm_Grd_ImportExcel.designer.cs">
+      <DependentUpon>frm_Grd_ImportExcel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HeThong\frm_Grd_LuoiHienThi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HeThong\frm_Grd_LuoiHienThi.designer.cs">
+      <DependentUpon>frm_Grd_LuoiHienThi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HeThong\frm_Grd_CotLuoiHienThi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HeThong\frm_Grd_CotLuoiHienThi.designer.cs">
+      <DependentUpon>frm_Grd_CotLuoiHienThi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InBang\frmGRDInBangChungChi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InBang\frmGRDInBangChungChi.designer.cs">
+      <DependentUpon>frmGRDInBangChungChi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InBang\frm_Grd_CapBangChungChi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InBang\frm_Grd_CapBangChungChi.Designer.cs">
+      <DependentUpon>frm_Grd_CapBangChungChi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChungChi\frm_Grd_DotCap_ChuongTrinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChungChi\frm_Grd_DotCap_ChuongTrinh.Designer.cs">
+      <DependentUpon>frm_Grd_DotCap_ChuongTrinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InBang\frm_Grd_DotCap_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InBang\frm_Grd_DotCap_2.Designer.cs">
+      <DependentUpon>frm_Grd_DotCap_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InBang\frm_Grd_HuyQuyetDinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InBang\frm_Grd_HuyQuyetDinh.designer.cs">
+      <DependentUpon>frm_Grd_HuyQuyetDinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InBang\frm_Grd_ChiTietQuyetDinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InBang\frm_Grd_ChiTietQuyetDinh.designer.cs">
+      <DependentUpon>frm_Grd_ChiTietQuyetDinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InBang\frm_Grd_XacNhanNhanBang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InBang\frm_Grd_XacNhanNhanBang.designer.cs">
+      <DependentUpon>frm_Grd_XacNhanNhanBang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InBang\frm_Grd_QuyetDinhCongNhanVaDotCap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InBang\frm_Grd_QuyetDinhCongNhanVaDotCap.Designer.cs">
+      <DependentUpon>frm_Grd_QuyetDinhCongNhanVaDotCap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InBang\frm_Grd_DotCap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InBang\frm_Grd_DotCap.Designer.cs">
+      <DependentUpon>frm_Grd_DotCap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InBang\frm_Grd_MauChungChi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InBang\frm_Grd_MauChungChi.designer.cs">
+      <DependentUpon>frm_Grd_MauChungChi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InBang\frm_Grd_QuanLyMauIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InBang\frm_Grd_QuanLyMauIn.Designer.cs">
+      <DependentUpon>frm_Grd_QuanLyMauIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InBang\frm_Grd_QuanLyQuyetDinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InBang\frm_Grd_QuanLyQuyetDinh.designer.cs">
+      <DependentUpon>frm_Grd_QuanLyQuyetDinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InBang\frm_Grd_QuyetDinhHoanThanh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InBang\frm_Grd_QuyetDinhHoanThanh.Designer.cs">
+      <DependentUpon>frm_Grd_QuyetDinhHoanThanh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InBang\frm_Grd_QuyetDinhCongNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InBang\frm_Grd_QuyetDinhCongNhan.Designer.cs">
+      <DependentUpon>frm_Grd_QuyetDinhCongNhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InBang\frm_Grd_TinhTrangSauKhiHuyQuyetDinhTotNghiep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InBang\frm_Grd_TinhTrangSauKhiHuyQuyetDinhTotNghiep.Designer.cs">
+      <DependentUpon>frm_Grd_TinhTrangSauKhiHuyQuyetDinhTotNghiep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InBang\frm_Grd_TruongDuLieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InBang\frm_Grd_TruongDuLieu.Designer.cs">
+      <DependentUpon>frm_Grd_TruongDuLieu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InBang\XtraReportMauBangChungChi.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="InBang\XtraReportMauBangChungChi.designer.cs">
+      <DependentUpon>XtraReportMauBangChungChi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhoiBang\Dialog_reason.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhoiBang\Dialog_reason.Designer.cs">
+      <DependentUpon>Dialog_reason.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhoiBang\frm_Grd_Chitietphoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhoiBang\frm_Grd_Chitietphoi.designer.cs">
+      <DependentUpon>frm_Grd_Chitietphoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhoiBang\frm_Grd_DanhMucLoaiPhoiBang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhoiBang\frm_Grd_DanhMucLoaiPhoiBang.Designer.cs">
+      <DependentUpon>frm_Grd_DanhMucLoaiPhoiBang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhoiBang\frm_Grd_CauHinhLoaiPhoi_Nganh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhoiBang\frm_Grd_CauHinhLoaiPhoi_Nganh.Designer.cs">
+      <DependentUpon>frm_Grd_CauHinhLoaiPhoi_Nganh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhoiBang\frm_Grd_DotCapPhoiBang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhoiBang\frm_Grd_DotCapPhoiBang.Designer.cs">
+      <DependentUpon>frm_Grd_DotCapPhoiBang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhoiBang\frm_Grd_DanhMucPhoiBang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhoiBang\frm_Grd_DanhMucPhoiBang.Designer.cs">
+      <DependentUpon>frm_Grd_DanhMucPhoiBang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="rfrm_Grd_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rfrm_Grd_Main.Designer.cs">
+      <DependentUpon>rfrm_Grd_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ChungChi\frmChiTietDiem_XetTotNghiep.resx">
+      <DependentUpon>frmChiTietDiem_XetTotNghiep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChungChi\frmSoQuyetDinh_ReportPhoiBang.resx">
+      <DependentUpon>frmSoQuyetDinh_ReportPhoiBang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChungChi\frm_Grd_DanhSachSinhVienDotXet.resx">
+      <DependentUpon>frm_Grd_DanhSachSinhVienDotXet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChungChi\frm_Grd_ChuongTrinhDaoTao_TheoKhoa.resx">
+      <DependentUpon>frm_Grd_ChuongTrinhDaoTao_TheoKhoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChungChi\frm_Grd_DS_SinhVienTotNghiep.resx">
+      <DependentUpon>frm_Grd_DS_SinhVienTotNghiep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChungChi\frm_Grd_ImportExcel.resx">
+      <DependentUpon>frm_Grd_ImportExcel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChungChi\frm_Grd_Lop.resx">
+      <DependentUpon>frm_Grd_Lop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChungChi\frm_Grd_ChuongTrinhDaoTao.resx">
+      <DependentUpon>frm_Grd_ChuongTrinhDaoTao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChungChi\frm_Grd_DSSinhVienNopHoSoChungChi.resx">
+      <DependentUpon>frm_Grd_DSSinhVienNopHoSoChungChi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChungChi\frm_Grd_TaoChuanXetNhanh.resx">
+      <DependentUpon>frm_Grd_TaoChuanXetNhanh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChungChi\frm_Grd_ChungChiNopThayThe.resx">
+      <DependentUpon>frm_Grd_ChungChiNopThayThe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChungChi\frm_Grd_ThongTinSinhVien.resx">
+      <DependentUpon>frm_Grd_ThongTinSinhVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChungChi\frmPRJThongTinNhomTuChonDiaLog.resx">
+      <DependentUpon>frmPRJThongTinNhomTuChonDiaLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChungChi\frmSoQuyetDinh.resx">
+      <DependentUpon>frmSoQuyetDinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChungChi\frm_Grd_CapNhatThangXepLoai.resx">
+      <DependentUpon>frm_Grd_CapNhatThangXepLoai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChungChi\frm_Grd_ChonChuanXeCopy.resx">
+      <DependentUpon>frm_Grd_ChonChuanXeCopy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChungChi\frm_Grd_ChonChuanXet.resx">
+      <DependentUpon>frm_Grd_ChonChuanXet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChungChi\frm_Grd_ChuanXet.resx">
+      <DependentUpon>frm_Grd_ChuanXet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChungChi\frm_Grd_DanhMucLoaiChungChi.resx">
+      <DependentUpon>frm_Grd_DanhMucLoaiChungChi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChungChi\frm_Grd_DieuKienXet.resx">
+      <DependentUpon>frm_Grd_DieuKienXet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChungChi\frm_Grd_DotXet.resx">
+      <DependentUpon>frm_Grd_DotXet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChungChi\frm_Grd_NopHoSoChungChi.resx">
+      <DependentUpon>frm_Grd_NopHoSoChungChi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChungChi\frm_Grd_SoChuanXetDat.resx">
+      <DependentUpon>frm_Grd_SoChuanXetDat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChungChi\frm_Grd_ThangXepLoaiChiTiet.resx">
+      <DependentUpon>frm_Grd_ThangXepLoaiChiTiet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChungChi\frm_Grd_XetTotNghiep.resx">
+      <DependentUpon>frm_Grd_XetTotNghiep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChungChi\frm_Grd_ChoThucThi.resx">
+      <DependentUpon>frm_Grd_ChoThucThi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Grd_ConnectDatabase.resx">
+      <DependentUpon>frm_Grd_ConnectDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeThong\frm_Grd_CotHienThi.resx">
+      <DependentUpon>frm_Grd_CotHienThi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeThong\frm_Grd_CauHinhModule.resx">
+      <DependentUpon>frm_Grd_CauHinhModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeThong\frm_Grd_DongDauKyTen.resx">
+      <DependentUpon>frm_Grd_DongDauKyTen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeThong\frm_Grd_DoiMatKhau.resx">
+      <DependentUpon>frm_Grd_DoiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeThong\frm_Grd_DoiNamHocHocKy.resx">
+      <DependentUpon>frm_Grd_DoiNamHocHocKy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeThong\frm_Grd_ImportExcel.resx">
+      <DependentUpon>frm_Grd_ImportExcel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeThong\frm_Grd_LuoiHienThi.resx">
+      <DependentUpon>frm_Grd_LuoiHienThi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeThong\frm_Grd_CotLuoiHienThi.resx">
+      <DependentUpon>frm_Grd_CotLuoiHienThi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InBang\frmGRDInBangChungChi.resx">
+      <DependentUpon>frmGRDInBangChungChi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InBang\frm_Grd_CapBangChungChi.resx">
+      <DependentUpon>frm_Grd_CapBangChungChi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChungChi\frm_Grd_DotCap_ChuongTrinh.resx">
+      <DependentUpon>frm_Grd_DotCap_ChuongTrinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InBang\frm_Grd_DotCap_2.resx">
+      <DependentUpon>frm_Grd_DotCap_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InBang\frm_Grd_HuyQuyetDinh.resx">
+      <DependentUpon>frm_Grd_HuyQuyetDinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InBang\frm_Grd_ChiTietQuyetDinh.resx">
+      <DependentUpon>frm_Grd_ChiTietQuyetDinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InBang\frm_Grd_XacNhanNhanBang.resx">
+      <DependentUpon>frm_Grd_XacNhanNhanBang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InBang\frm_Grd_QuyetDinhCongNhanVaDotCap.resx">
+      <DependentUpon>frm_Grd_QuyetDinhCongNhanVaDotCap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InBang\frm_Grd_DotCap.resx">
+      <DependentUpon>frm_Grd_DotCap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InBang\frm_Grd_MauChungChi.resx">
+      <DependentUpon>frm_Grd_MauChungChi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InBang\frm_Grd_QuanLyMauIn.resx">
+      <DependentUpon>frm_Grd_QuanLyMauIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InBang\frm_Grd_QuanLyQuyetDinh.resx">
+      <DependentUpon>frm_Grd_QuanLyQuyetDinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InBang\frm_Grd_QuyetDinhHoanThanh.resx">
+      <DependentUpon>frm_Grd_QuyetDinhHoanThanh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InBang\frm_Grd_QuyetDinhCongNhan.resx">
+      <DependentUpon>frm_Grd_QuyetDinhCongNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InBang\frm_Grd_TinhTrangSauKhiHuyQuyetDinhTotNghiep.resx">
+      <DependentUpon>frm_Grd_TinhTrangSauKhiHuyQuyetDinhTotNghiep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InBang\frm_Grd_TruongDuLieu.resx">
+      <DependentUpon>frm_Grd_TruongDuLieu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InBang\XtraReportMauBangChungChi.resx">
+      <DependentUpon>XtraReportMauBangChungChi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhoiBang\Dialog_reason.resx">
+      <DependentUpon>Dialog_reason.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhoiBang\frm_Grd_Chitietphoi.resx">
+      <DependentUpon>frm_Grd_Chitietphoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhoiBang\frm_Grd_DanhMucLoaiPhoiBang.resx">
+      <DependentUpon>frm_Grd_DanhMucLoaiPhoiBang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhoiBang\frm_Grd_CauHinhLoaiPhoi_Nganh.resx">
+      <DependentUpon>frm_Grd_CauHinhLoaiPhoi_Nganh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhoiBang\frm_Grd_DotCapPhoiBang.resx">
+      <DependentUpon>frm_Grd_DotCapPhoiBang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhoiBang\frm_Grd_DanhMucPhoiBang.resx">
+      <DependentUpon>frm_Grd_DanhMucPhoiBang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rfrm_Grd_Main.resx">
+      <DependentUpon>rfrm_Grd_Main.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo_PSC_new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BaoCao\" />
+    <Folder Include="bin\Release\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CommonLib\CommonLib.csproj">
+      <Project>{e7b7094c-8d32-4b0d-9e3d-e561587f0026}</Project>
+      <Name>CommonLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GrdCore\GrdCore.csproj">
+      <Project>{3b29e214-a338-4925-a249-070f2624bebb}</Project>
+      <Name>GrdCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GrdReports\GrdReports.csproj">
+      <Project>{275f18ab-c5de-400d-80ee-768ded3a03a7}</Project>
+      <Name>GrdReports</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\CommonLib.dll" />
+    <Content Include="bin\Debug\CommonLib.pdb" />
+    <Content Include="bin\Debug\DevExpress.BonusSkins.v15.2.dll" />
+    <Content Include="bin\Debug\DevExpress.Charts.v15.2.Core.dll" />
+    <Content Include="bin\Debug\DevExpress.CodeParser.v15.2.dll" />
+    <Content Include="bin\Debug\DevExpress.Common.dll" />
+    <Content Include="bin\Debug\DevExpress.Data.v15.2.dll" />
+    <Content Include="bin\Debug\DevExpress.Data.v15.2.xml" />
+    <Content Include="bin\Debug\DevExpress.DataAccess.v15.2.dll" />
+    <Content Include="bin\Debug\DevExpress.DataAccess.v15.2.UI.dll" />
+    <Content Include="bin\Debug\DevExpress.DataAccess.v15.2.UI.xml" />
+    <Content Include="bin\Debug\DevExpress.DataAccess.v15.2.xml" />
+    <Content Include="bin\Debug\DevExpress.DemoData.v15.2.Core.dll" />
+    <Content Include="bin\Debug\DevExpress.DemoData.v15.2.dll" />
+    <Content Include="bin\Debug\DevExpress.Office.v15.2.Core.dll" />
+    <Content Include="bin\Debug\DevExpress.Office.v15.2.Core.xml" />
+    <Content Include="bin\Debug\DevExpress.Pdf.v15.2.Core.dll" />
+    <Content Include="bin\Debug\DevExpress.Pdf.v15.2.Core.xml" />
+    <Content Include="bin\Debug\DevExpress.Pdf.v15.2.Drawing.dll" />
+    <Content Include="bin\Debug\DevExpress.Pdf.v15.2.Drawing.xml" />
+    <Content Include="bin\Debug\DevExpress.PivotGrid.v15.2.Core.dll" />
+    <Content Include="bin\Debug\DevExpress.PivotGrid.v15.2.Core.xml" />
+    <Content Include="bin\Debug\DevExpress.Printing.v15.2.Core.dll" />
+    <Content Include="bin\Debug\DevExpress.Printing.v15.2.Core.xml" />
+    <Content Include="bin\Debug\DevExpress.RichEdit.v15.2.Core.dll" />
+    <Content Include="bin\Debug\DevExpress.RichEdit.v15.2.Core.xml" />
+    <Content Include="bin\Debug\DevExpress.Sparkline.v15.2.Core.dll" />
+    <Content Include="bin\Debug\DevExpress.Sparkline.v15.2.Core.xml" />
+    <Content Include="bin\Debug\DevExpress.Tutorials.v15.2.dll" />
+    <Content Include="bin\Debug\DevExpress.Utils.v15.2.dll" />
+    <Content Include="bin\Debug\DevExpress.Utils.v15.2.UI.dll" />
+    <Content Include="bin\Debug\DevExpress.Utils.v15.2.UI.xml" />
+    <Content Include="bin\Debug\DevExpress.Utils.v15.2.xml" />
+    <Content Include="bin\Debug\DevExpress.Xpo.v15.2.dll" />
+    <Content Include="bin\Debug\DevExpress.Xpo.v15.2.xml" />
+    <Content Include="bin\Debug\DevExpress.XtraBars.v15.2.dll" />
+    <Content Include="bin\Debug\DevExpress.XtraBars.v15.2.xml" />
+    <Content Include="bin\Debug\DevExpress.XtraCharts.v15.2.dll" />
+    <Content Include="bin\Debug\DevExpress.XtraCharts.v15.2.Extensions.dll" />
+    <Content Include="bin\Debug\DevExpress.XtraCharts.v15.2.Wizard.dll" />
+    <Content Include="bin\Debug\DevExpress.XtraCharts.v15.2.Wizard.xml" />
+    <Content Include="bin\Debug\DevExpress.XtraCharts.v15.2.xml" />
+    <Content Include="bin\Debug\DevExpress.XtraEditors.v15.2.dll" />
+    <Content Include="bin\Debug\DevExpress.XtraEditors.v15.2.xml" />
+    <Content Include="bin\Debug\DevExpress.XtraGauges.v15.2.Core.dll" />
+    <Content Include="bin\Debug\DevExpress.XtraGauges.v15.2.Core.xml" />
+    <Content Include="bin\Debug\DevExpress.XtraGrid.v15.2.dll" />
+    <Content Include="bin\Debug\DevExpress.XtraGrid.v15.2.xml" />
+    <Content Include="bin\Debug\DevExpress.XtraLayout.v15.2.dll" />
+    <Content Include="bin\Debug\DevExpress.XtraLayout.v15.2.xml" />
+    <Content Include="bin\Debug\DevExpress.XtraNavBar.v15.2.dll" />
+    <Content Include="bin\Debug\DevExpress.XtraNavBar.v15.2.xml" />
+    <Content Include="bin\Debug\DevExpress.XtraPivotGrid.v15.2.dll" />
+    <Content Include="bin\Debug\DevExpress.XtraPivotGrid.v15.2.xml" />
+    <Content Include="bin\Debug\DevExpress.XtraPrinting.v15.2.dll" />
+    <Content Include="bin\Debug\DevExpress.XtraPrinting.v15.2.xml" />
+    <Content Include="bin\Debug\DevExpress.XtraReports.v15.2.dll" />
+    <Content Include="bin\Debug\DevExpress.XtraReports.v15.2.Extensions.dll" />
+    <Content Include="bin\Debug\DevExpress.XtraReports.v15.2.Extensions.xml" />
+    <Content Include="bin\Debug\DevExpress.XtraReports.v15.2.xml" />
+    <Content Include="bin\Debug\DevExpress.XtraRichEdit.v15.2.dll" />
+    <Content Include="bin\Debug\DevExpress.XtraRichEdit.v15.2.xml" />
+    <Content Include="bin\Debug\DevExpress.XtraTreeList.v15.2.dll" />
+    <Content Include="bin\Debug\DevExpress.XtraTreeList.v15.2.xml" />
+    <Content Include="bin\Debug\DevExpress.XtraVerticalGrid.v15.2.dll" />
+    <Content Include="bin\Debug\DevExpress.XtraVerticalGrid.v15.2.xml" />
+    <Content Include="bin\Debug\de\DevExpress.Data.v15.2.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.DataAccess.v15.2.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.DataAccess.v15.2.UI.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.Office.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.Pdf.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.PivotGrid.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.Printing.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.RichEdit.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.Sparkline.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.Utils.v15.2.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.Utils.v15.2.UI.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.Xpo.v15.2.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.XtraBars.v15.2.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.XtraCharts.v15.2.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.XtraCharts.v15.2.Wizard.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.XtraEditors.v15.2.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.XtraGauges.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.XtraGrid.v15.2.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.XtraLayout.v15.2.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.XtraNavBar.v15.2.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.XtraPivotGrid.v15.2.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.XtraPrinting.v15.2.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.XtraReports.v15.2.Extensions.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.XtraReports.v15.2.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.XtraRichEdit.v15.2.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.XtraTreeList.v15.2.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.XtraVerticalGrid.v15.2.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.Data.v15.2.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.DataAccess.v15.2.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.DataAccess.v15.2.UI.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.Office.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.Pdf.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.PivotGrid.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.Printing.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.RichEdit.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.Sparkline.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.Utils.v15.2.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.Utils.v15.2.UI.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.Xpo.v15.2.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.XtraBars.v15.2.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.XtraCharts.v15.2.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.XtraCharts.v15.2.Wizard.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.XtraEditors.v15.2.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.XtraGauges.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.XtraGrid.v15.2.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.XtraLayout.v15.2.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.XtraNavBar.v15.2.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.XtraPivotGrid.v15.2.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.XtraPrinting.v15.2.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.XtraReports.v15.2.Extensions.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.XtraReports.v15.2.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.XtraRichEdit.v15.2.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.XtraTreeList.v15.2.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.XtraVerticalGrid.v15.2.resources.dll" />
+    <Content Include="bin\Debug\GrdCore.dll" />
+    <Content Include="bin\Debug\GrdCore.pdb" />
+    <Content Include="bin\Debug\GrdReports.dll" />
+    <Content Include="bin\Debug\GrdReports.pdb" />
+    <Content Include="bin\Debug\GrdUI.dll" />
+    <Content Include="bin\Debug\GrdUI.pdb" />
+    <Content Include="bin\Debug\Infragistics2.Shared.v7.3.dll" />
+    <Content Include="bin\Debug\Infragistics2.Shared.v7.3.xml" />
+    <Content Include="bin\Debug\Infragistics2.Win.Misc.v7.3.dll" />
+    <Content Include="bin\Debug\Infragistics2.Win.Misc.v7.3.xml" />
+    <Content Include="bin\Debug\Infragistics2.Win.UltraWinGrid.v7.3.dll" />
+    <Content Include="bin\Debug\Infragistics2.Win.UltraWinGrid.v7.3.xml" />
+    <Content Include="bin\Debug\Infragistics2.Win.v7.3.dll" />
+    <Content Include="bin\Debug\Infragistics2.Win.v7.3.xml" />
+    <Content Include="bin\Debug\ja\DevExpress.Data.v15.2.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.DataAccess.v15.2.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.DataAccess.v15.2.UI.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.Office.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.Pdf.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.PivotGrid.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.Printing.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.RichEdit.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.Sparkline.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.Utils.v15.2.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.Utils.v15.2.UI.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.Xpo.v15.2.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.XtraBars.v15.2.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.XtraCharts.v15.2.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.XtraCharts.v15.2.Wizard.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.XtraEditors.v15.2.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.XtraGauges.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.XtraGrid.v15.2.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.XtraLayout.v15.2.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.XtraNavBar.v15.2.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.XtraPivotGrid.v15.2.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.XtraPrinting.v15.2.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.XtraReports.v15.2.Extensions.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.XtraReports.v15.2.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.XtraRichEdit.v15.2.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.XtraTreeList.v15.2.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.XtraVerticalGrid.v15.2.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.Data.v15.2.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.DataAccess.v15.2.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.DataAccess.v15.2.UI.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.Office.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.Pdf.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.PivotGrid.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.Printing.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.RichEdit.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.Sparkline.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.Utils.v15.2.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.Utils.v15.2.UI.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.Xpo.v15.2.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.XtraBars.v15.2.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.XtraCharts.v15.2.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.XtraCharts.v15.2.Wizard.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.XtraEditors.v15.2.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.XtraGauges.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.XtraGrid.v15.2.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.XtraLayout.v15.2.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.XtraNavBar.v15.2.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.XtraPivotGrid.v15.2.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.XtraPrinting.v15.2.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.XtraReports.v15.2.Extensions.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.XtraReports.v15.2.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.XtraRichEdit.v15.2.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.XtraTreeList.v15.2.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.XtraVerticalGrid.v15.2.resources.dll" />
+    <Content Include="bin\Debug\SpreadsheetGear.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

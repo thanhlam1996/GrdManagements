@@ -1,0 +1,774 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{275F18AB-C5DE-400D-80EE-768DED3A03A7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GrdReports</RootNamespace>
+    <AssemblyName>GrdReports</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Tutorials.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v15.2.UI, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v15.2.Wizard, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v15.2.Extensions, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v15.2.Reporting.Extensions, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraWizard.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseForms\BarLookAndFeelItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BaseForms\CustomDesignForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForms\MainFeaturesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BaseForms\ModuleControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BaseForms\PreviewControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DataSetReport.cs">
+      <DependentUpon>DataSetReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetReport.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmGrdReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGrdReports.designer.cs">
+      <DependentUpon>frmGrdReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\CDYTBD\XtraReport_CDYTBD_GiayChungNhanTN.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\CDYTBD\XtraReport_CDYTBD_GiayChungNhanTN.designer.cs">
+      <DependentUpon>XtraReport_CDYTBD_GiayChungNhanTN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DNU\SubReport\Sub_XtraReport_BangDiem2Cot_Mat1_DHDN.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\DNU\SubReport\Sub_XtraReport_BangDiem2Cot_Mat1_DHDN.designer.cs">
+      <DependentUpon>Sub_XtraReport_BangDiem2Cot_Mat1_DHDN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DNU\SubReport\Sub_XtraReport_BangDiem2Cot_Mat2_DHDN.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\DNU\SubReport\Sub_XtraReport_BangDiem2Cot_Mat2_DHDN.designer.cs">
+      <DependentUpon>Sub_XtraReport_BangDiem2Cot_Mat2_DHDN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DNU\SubReport\Sub_XtraReport_BangDiem2Cot_ThiTotNghiep_DHDN.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\DNU\SubReport\Sub_XtraReport_BangDiem2Cot_ThiTotNghiep_DHDN.designer.cs">
+      <DependentUpon>Sub_XtraReport_BangDiem2Cot_ThiTotNghiep_DHDN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DNU\SubReport\XtraReport_BangDiemTotNghiepDayDu_DNU1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\DNU\SubReport\XtraReport_BangDiemTotNghiepDayDu_DNU1.designer.cs">
+      <DependentUpon>XtraReport_BangDiemTotNghiepDayDu_DNU1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DNU\SubReport\XtraReport_BangDiemTotNghiepDayDu_DNU_SubReport1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\DNU\SubReport\XtraReport_BangDiemTotNghiepDayDu_DNU_SubReport1.designer.cs">
+      <DependentUpon>XtraReport_BangDiemTotNghiepDayDu_DNU_SubReport1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DNU\SubReport\XtraReport_BangDiemTotNghiepDayDu_DNU_SubReport2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\DNU\SubReport\XtraReport_BangDiemTotNghiepDayDu_DNU_SubReport2.designer.cs">
+      <DependentUpon>XtraReport_BangDiemTotNghiepDayDu_DNU_SubReport2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DNU\XtraReport_BangDiemTNCaNhan_2Cot_DHDN.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\DNU\XtraReport_BangDiemTNCaNhan_2Cot_DHDN.designer.cs">
+      <DependentUpon>XtraReport_BangDiemTNCaNhan_2Cot_DHDN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DNU\XtraReport_BangDiemTotNghiepDayDu_DNU.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\DNU\XtraReport_BangDiemTotNghiepDayDu_DNU.designer.cs">
+      <DependentUpon>XtraReport_BangDiemTotNghiepDayDu_DNU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DNU\XtraReport_DanhSachCongNhanTN_DNU.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\DNU\XtraReport_DanhSachCongNhanTN_DNU.designer.cs">
+      <DependentUpon>XtraReport_DanhSachCongNhanTN_DNU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DNU\XtraReport_DanhSachSVDatTN_DNU.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\DNU\XtraReport_DanhSachSVDatTN_DNU.designer.cs">
+      <DependentUpon>XtraReport_DanhSachSVDatTN_DNU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DNU\XtraReport_DanhSachSVKhongDatTN_DNU.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\DNU\XtraReport_DanhSachSVKhongDatTN_DNU.designer.cs">
+      <DependentUpon>XtraReport_DanhSachSVKhongDatTN_DNU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DNU\XtraReport_DNU_ChungNhanHoanThanhKhoaHoc.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\DNU\XtraReport_DNU_ChungNhanHoanThanhKhoaHoc.designer.cs">
+      <DependentUpon>XtraReport_DNU_ChungNhanHoanThanhKhoaHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DNU\XtraReport_KetQuaXetTN_DNU.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\DNU\XtraReport_KetQuaXetTN_DNU.designer.cs">
+      <DependentUpon>XtraReport_KetQuaXetTN_DNU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DNU\XtraReport_SoGocCapBangTN_DNU.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\DNU\XtraReport_SoGocCapBangTN_DNU.designer.cs">
+      <DependentUpon>XtraReport_SoGocCapBangTN_DNU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DNU\XtraReport_SoGocCapChungChi_DNU.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\DNU\XtraReport_SoGocCapChungChi_DNU.designer.cs">
+      <DependentUpon>XtraReport_SoGocCapChungChi_DNU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UEL\SubReport\XtraReport_BangDiemTNA3_TiengAnh_Phai_KCQ.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\UEL\SubReport\XtraReport_BangDiemTNA3_TiengAnh_Phai_KCQ.designer.cs">
+      <DependentUpon>XtraReport_BangDiemTNA3_TiengAnh_Phai_KCQ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UEL\SubReport\XtraReport_BangDiemTNA3_TiengAnh_Phai.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\UEL\SubReport\XtraReport_BangDiemTNA3_TiengAnh_Phai.designer.cs">
+      <DependentUpon>XtraReport_BangDiemTNA3_TiengAnh_Phai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UEL\SubReport\XtraReport_BangDiemTNA3_TiengAnh_Trai_KCQ.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\UEL\SubReport\XtraReport_BangDiemTNA3_TiengAnh_Trai_KCQ.designer.cs">
+      <DependentUpon>XtraReport_BangDiemTNA3_TiengAnh_Trai_KCQ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UEL\SubReport\XtraReport_BangDiemTNA3_TiengAnh_Trai.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\UEL\SubReport\XtraReport_BangDiemTNA3_TiengAnh_Trai.designer.cs">
+      <DependentUpon>XtraReport_BangDiemTNA3_TiengAnh_Trai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UEL\SubReport\XtraReport_BangDiemTNA3_TiengViet_Phai_KCQ.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\UEL\SubReport\XtraReport_BangDiemTNA3_TiengViet_Phai_KCQ.designer.cs">
+      <DependentUpon>XtraReport_BangDiemTNA3_TiengViet_Phai_KCQ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UEL\SubReport\XtraReport_BangDiemTNA3_TiengViet_Phai.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\UEL\SubReport\XtraReport_BangDiemTNA3_TiengViet_Phai.designer.cs">
+      <DependentUpon>XtraReport_BangDiemTNA3_TiengViet_Phai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UEL\SubReport\XtraReport_BangDiemTNA3_TiengViet_Trai_KCQ.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\UEL\SubReport\XtraReport_BangDiemTNA3_TiengViet_Trai_KCQ.designer.cs">
+      <DependentUpon>XtraReport_BangDiemTNA3_TiengViet_Trai_KCQ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UEL\SubReport\XtraReport_BangDiemTNA3_TiengViet_Trai.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\UEL\SubReport\XtraReport_BangDiemTNA3_TiengViet_Trai.designer.cs">
+      <DependentUpon>XtraReport_BangDiemTNA3_TiengViet_Trai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UEL\SubReport\XtraReport_GDTC_TiengAnh.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\UEL\SubReport\XtraReport_GDTC_TiengAnh.designer.cs">
+      <DependentUpon>XtraReport_GDTC_TiengAnh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UEL\SubReport\XtraReport_GDTC_TiengViet.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\UEL\SubReport\XtraReport_GDTC_TiengViet.designer.cs">
+      <DependentUpon>XtraReport_GDTC_TiengViet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UEL\XtraReport_BienBanKiemKeTinhSuDungVanBang.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\UEL\XtraReport_BienBanKiemKeTinhSuDungVanBang.Designer.cs">
+      <DependentUpon>XtraReport_BienBanKiemKeTinhSuDungVanBang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UEL\XtraReport_ThongKeXepLoaiTotNghiepTheoQuyetDinhDot.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\UEL\XtraReport_ThongKeXepLoaiTotNghiepTheoQuyetDinhDot.Designer.cs">
+      <DependentUpon>XtraReport_ThongKeXepLoaiTotNghiepTheoQuyetDinhDot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UEL\XtraReport_ThongKeSLTotNghiepTheoQuyetDinhDot.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\UEL\XtraReport_ThongKeSLTotNghiepTheoQuyetDinhDot.Designer.cs">
+      <DependentUpon>XtraReport_ThongKeSLTotNghiepTheoQuyetDinhDot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UEL\XtraReport_BangDiemTotNghiepAnhVietA3_KCQ.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\UEL\XtraReport_BangDiemTotNghiepAnhVietA3_KCQ.designer.cs">
+      <DependentUpon>XtraReport_BangDiemTotNghiepAnhVietA3_KCQ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UEL\XtraReport_BangDiemTotNghiepAnhVietA3.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\UEL\XtraReport_BangDiemTotNghiepAnhVietA3.designer.cs">
+      <DependentUpon>XtraReport_BangDiemTotNghiepAnhVietA3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UEL\XtraReport_BangDiemTotNghiepKCQ_UEL.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\UEL\XtraReport_BangDiemTotNghiepKCQ_UEL.Designer.cs">
+      <DependentUpon>XtraReport_BangDiemTotNghiepKCQ_UEL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UEL\XtraReport_BangDiemXetTotNghiep_UEL.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\UEL\XtraReport_BangDiemXetTotNghiep_UEL.Designer.cs">
+      <DependentUpon>XtraReport_BangDiemXetTotNghiep_UEL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UEL\XtraReport_DanhSachCongNhanTN_UEL.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\UEL\XtraReport_DanhSachCongNhanTN_UEL.designer.cs">
+      <DependentUpon>XtraReport_DanhSachCongNhanTN_UEL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UEL\XtraReport_ThonkeTotNghiep_TheoNganh.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\UEL\XtraReport_ThonkeTotNghiep_TheoNganh.designer.cs">
+      <DependentUpon>XtraReport_ThonkeTotNghiep_TheoNganh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UEL\XtraReport_DanhSachCongNhanTN_UEL_KhongXetDaCapQD.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\UEL\XtraReport_DanhSachCongNhanTN_UEL_KhongXetDaCapQD.designer.cs">
+      <DependentUpon>XtraReport_DanhSachCongNhanTN_UEL_KhongXetDaCapQD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UEL\XtraReport_DanhSachSVKhongDatTN_TheoNganh.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\UEL\XtraReport_DanhSachSVKhongDatTN_TheoNganh.designer.cs">
+      <DependentUpon>XtraReport_DanhSachSVKhongDatTN_TheoNganh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UEL\XtraReport_GiayChungNhanTotNghiep_UEL.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\UEL\XtraReport_GiayChungNhanTotNghiep_UEL.designer.cs">
+      <DependentUpon>XtraReport_GiayChungNhanTotNghiep_UEL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UEL\XtraReport_SoGocCapBangTN_UEL.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\UEL\XtraReport_SoGocCapBangTN_UEL.designer.cs">
+      <DependentUpon>XtraReport_SoGocCapBangTN_UEL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UEL\XtraReport_Yersin_DanhSachSVKhongDatTN_NhomAV.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\UEL\XtraReport_Yersin_DanhSachSVKhongDatTN_NhomAV.designer.cs">
+      <DependentUpon>XtraReport_Yersin_DanhSachSVKhongDatTN_NhomAV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UEL\XtraReport_Yersin_DanhSachSVNoSach.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\UEL\XtraReport_Yersin_DanhSachSVNoSach.designer.cs">
+      <DependentUpon>XtraReport_Yersin_DanhSachSVNoSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UEL\XtraReport_GiayChungNhanHoanThanhKhoaHoc_UEL.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\UEL\XtraReport_GiayChungNhanHoanThanhKhoaHoc_UEL.designer.cs">
+      <DependentUpon>XtraReport_GiayChungNhanHoanThanhKhoaHoc_UEL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\USSH\XtraReport_USSH_BangDiemNCS_TienSi.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\USSH\XtraReport_USSH_BangDiemNCS_TienSi.designer.cs">
+      <DependentUpon>XtraReport_USSH_BangDiemNCS_TienSi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\USSH\XtraReport_USSH_BangDiemTienSi.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\USSH\XtraReport_USSH_BangDiemTienSi.designer.cs">
+      <DependentUpon>XtraReport_USSH_BangDiemTienSi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\USSH\XtraReport_USSH_DanhSachSV_DoAnTN.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\USSH\XtraReport_USSH_DanhSachSV_DoAnTN.designer.cs">
+      <DependentUpon>XtraReport_USSH_DanhSachSV_DoAnTN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UEL\XtraReport_Yersin_DanhSachSVNoPhi.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\UEL\XtraReport_Yersin_DanhSachSVNoPhi.designer.cs">
+      <DependentUpon>XtraReport_Yersin_DanhSachSVNoPhi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XtraReport_BangDiemTotNghiepDayDu_HCMUP.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XtraReport_BangDiemTotNghiepDayDu_HCMUP.Designer.cs">
+      <DependentUpon>XtraReport_BangDiemTotNghiepDayDu_HCMUP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XtraReport_GiayChungNhanDiem_HCMUP.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XtraReport_GiayChungNhanDiem_HCMUP.Designer.cs">
+      <DependentUpon>XtraReport_GiayChungNhanDiem_HCMUP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Yersin\XtraReport_BangDiemTotNghiep_HCMUP.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Yersin\XtraReport_BangDiemTotNghiep_HCMUP.Designer.cs">
+      <DependentUpon>XtraReport_BangDiemTotNghiep_HCMUP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XtraReport_DanhSachSVDatTN_TheoKhoa.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XtraReport_DanhSachSVDatTN_TheoKhoa.designer.cs">
+      <DependentUpon>XtraReport_DanhSachSVDatTN_TheoKhoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XtraReport_DanhSachSVKhongDatTN_TheoKhoa.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XtraReport_DanhSachSVKhongDatTN_TheoKhoa.designer.cs">
+      <DependentUpon>XtraReport_DanhSachSVKhongDatTN_TheoKhoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XtraReport_Yersin_KQXepLoaiBangTN.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XtraReport_Yersin_KQXepLoaiBangTN.designer.cs">
+      <DependentUpon>XtraReport_Yersin_KQXepLoaiBangTN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XtraReport_Yersin_DanhSachCongNhanTN.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XtraReport_Yersin_DanhSachCongNhanTN.designer.cs">
+      <DependentUpon>XtraReport_Yersin_DanhSachCongNhanTN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XtraReport_UTE_SoBang.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XtraReport_UTE_SoBang.designer.cs">
+      <DependentUpon>XtraReport_UTE_SoBang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Yersin\Sub\SubXtraReport_BangDiemNienChe_2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Yersin\Sub\SubXtraReport_BangDiemNienChe_2.Designer.cs">
+      <DependentUpon>SubXtraReport_BangDiemNienChe_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Yersin\Sub\SubXtraReport_BangDiemNienChe_1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Yersin\Sub\SubXtraReport_BangDiemNienChe_1.Designer.cs">
+      <DependentUpon>SubXtraReport_BangDiemNienChe_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Yersin\XtraReport_BangDiemTotNghiepDayDu_Yersin_NienChe.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Yersin\XtraReport_BangDiemTotNghiepDayDu_Yersin_NienChe.Designer.cs">
+      <DependentUpon>XtraReport_BangDiemTotNghiepDayDu_Yersin_NienChe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Yersin\XtraReport_BangDiemTotNghiepDayDu_Yersin.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Yersin\XtraReport_BangDiemTotNghiepDayDu_Yersin.Designer.cs">
+      <DependentUpon>XtraReport_BangDiemTotNghiepDayDu_Yersin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Yersin\XtraReport_Yersin_ThongKePhanLoaiTN_BGD.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Yersin\XtraReport_Yersin_ThongKePhanLoaiTN_BGD.designer.cs">
+      <DependentUpon>XtraReport_Yersin_ThongKePhanLoaiTN_BGD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Yersin\XtraReport_Yersin_ThongKeKetQuaXetTN.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Yersin\XtraReport_Yersin_ThongKeKetQuaXetTN.designer.cs">
+      <DependentUpon>XtraReport_Yersin_ThongKeKetQuaXetTN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Yersin\XtraReport_Yersin_GiayChungNhanHoanThanhCTDT.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Yersin\XtraReport_Yersin_GiayChungNhanHoanThanhCTDT.designer.cs">
+      <DependentUpon>XtraReport_Yersin_GiayChungNhanHoanThanhCTDT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Yersin\XtraReport_Yersin_ThongKeSoLuongSVTotNghiep.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Yersin\XtraReport_Yersin_ThongKeSoLuongSVTotNghiep.designer.cs">
+      <DependentUpon>XtraReport_Yersin_ThongKeSoLuongSVTotNghiep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Yersin\XtraReport_Yersin_TieuChuanTotNghiep.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Yersin\XtraReport_Yersin_TieuChuanTotNghiep.designer.cs">
+      <DependentUpon>XtraReport_Yersin_TieuChuanTotNghiep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Yersin\XtraReport_Yersin_GiayChungNhanTN.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Yersin\XtraReport_Yersin_GiayChungNhanTN.designer.cs">
+      <DependentUpon>XtraReport_Yersin_GiayChungNhanTN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Yersin\XtraReport_Yersin_DanhSachSVDatTN_TheoKhoa.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Yersin\XtraReport_Yersin_DanhSachSVDatTN_TheoKhoa.designer.cs">
+      <DependentUpon>XtraReport_Yersin_DanhSachSVDatTN_TheoKhoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Yersin\XtraReport_Yersin_DanhSachSVKhongDatTN_TheoKhoa.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Yersin\XtraReport_Yersin_DanhSachSVKhongDatTN_TheoKhoa.designer.cs">
+      <DependentUpon>XtraReport_Yersin_DanhSachSVKhongDatTN_TheoKhoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Yersin\XtraReport_Yersin_DanhSachSVKhongDatTN.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Yersin\XtraReport_Yersin_DanhSachSVKhongDatTN.designer.cs">
+      <DependentUpon>XtraReport_Yersin_DanhSachSVKhongDatTN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Yersin\XtraReport_Yersin_DanhSachSVDatTN.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Yersin\XtraReport_Yersin_DanhSachSVDatTN.designer.cs">
+      <DependentUpon>XtraReport_Yersin_DanhSachSVDatTN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Yersin\XtraReport_Yersin_KetQuaXepLoaiBangTN_NienChe.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Yersin\XtraReport_Yersin_KetQuaXepLoaiBangTN_NienChe.designer.cs">
+      <DependentUpon>XtraReport_Yersin_KetQuaXepLoaiBangTN_NienChe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Yersin\XtraReport_Yersin_KetQuaXepLoaiBangTN.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Yersin\XtraReport_Yersin_KetQuaXepLoaiBangTN.designer.cs">
+      <DependentUpon>XtraReport_Yersin_KetQuaXepLoaiBangTN.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BaseForms\CustomDesignForm.resx">
+      <DependentUpon>CustomDesignForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGrdReports.resx">
+      <DependentUpon>frmGrdReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Reports\CDYTBD\XtraReport_CDYTBD_GiayChungNhanTN.resx">
+      <DependentUpon>XtraReport_CDYTBD_GiayChungNhanTN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DNU\SubReport\Sub_XtraReport_BangDiem2Cot_Mat1_DHDN.resx">
+      <DependentUpon>Sub_XtraReport_BangDiem2Cot_Mat1_DHDN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DNU\SubReport\Sub_XtraReport_BangDiem2Cot_Mat2_DHDN.resx">
+      <DependentUpon>Sub_XtraReport_BangDiem2Cot_Mat2_DHDN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DNU\SubReport\Sub_XtraReport_BangDiem2Cot_ThiTotNghiep_DHDN.resx">
+      <DependentUpon>Sub_XtraReport_BangDiem2Cot_ThiTotNghiep_DHDN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DNU\SubReport\XtraReport_BangDiemTotNghiepDayDu_DNU1.resx">
+      <DependentUpon>XtraReport_BangDiemTotNghiepDayDu_DNU1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DNU\SubReport\XtraReport_BangDiemTotNghiepDayDu_DNU_SubReport1.resx">
+      <DependentUpon>XtraReport_BangDiemTotNghiepDayDu_DNU_SubReport1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DNU\SubReport\XtraReport_BangDiemTotNghiepDayDu_DNU_SubReport2.resx">
+      <DependentUpon>XtraReport_BangDiemTotNghiepDayDu_DNU_SubReport2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DNU\XtraReport_BangDiemTNCaNhan_2Cot_DHDN.resx">
+      <DependentUpon>XtraReport_BangDiemTNCaNhan_2Cot_DHDN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DNU\XtraReport_BangDiemTotNghiepDayDu_DNU.resx">
+      <DependentUpon>XtraReport_BangDiemTotNghiepDayDu_DNU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DNU\XtraReport_DanhSachCongNhanTN_DNU.resx">
+      <DependentUpon>XtraReport_DanhSachCongNhanTN_DNU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DNU\XtraReport_DanhSachSVDatTN_DNU.resx">
+      <DependentUpon>XtraReport_DanhSachSVDatTN_DNU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DNU\XtraReport_DanhSachSVKhongDatTN_DNU.resx">
+      <DependentUpon>XtraReport_DanhSachSVKhongDatTN_DNU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DNU\XtraReport_DNU_ChungNhanHoanThanhKhoaHoc.resx">
+      <DependentUpon>XtraReport_DNU_ChungNhanHoanThanhKhoaHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DNU\XtraReport_KetQuaXetTN_DNU.resx">
+      <DependentUpon>XtraReport_KetQuaXetTN_DNU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DNU\XtraReport_SoGocCapBangTN_DNU.resx">
+      <DependentUpon>XtraReport_SoGocCapBangTN_DNU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DNU\XtraReport_SoGocCapChungChi_DNU.resx">
+      <DependentUpon>XtraReport_SoGocCapChungChi_DNU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UEL\SubReport\XtraReport_BangDiemTNA3_TiengAnh_Phai_KCQ.resx">
+      <DependentUpon>XtraReport_BangDiemTNA3_TiengAnh_Phai_KCQ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UEL\SubReport\XtraReport_BangDiemTNA3_TiengAnh_Phai.resx">
+      <DependentUpon>XtraReport_BangDiemTNA3_TiengAnh_Phai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UEL\SubReport\XtraReport_BangDiemTNA3_TiengAnh_Trai_KCQ.resx">
+      <DependentUpon>XtraReport_BangDiemTNA3_TiengAnh_Trai_KCQ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UEL\SubReport\XtraReport_BangDiemTNA3_TiengAnh_Trai.resx">
+      <DependentUpon>XtraReport_BangDiemTNA3_TiengAnh_Trai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UEL\SubReport\XtraReport_BangDiemTNA3_TiengViet_Phai_KCQ.resx">
+      <DependentUpon>XtraReport_BangDiemTNA3_TiengViet_Phai_KCQ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UEL\SubReport\XtraReport_BangDiemTNA3_TiengViet_Phai.resx">
+      <DependentUpon>XtraReport_BangDiemTNA3_TiengViet_Phai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UEL\SubReport\XtraReport_BangDiemTNA3_TiengViet_Trai_KCQ.resx">
+      <DependentUpon>XtraReport_BangDiemTNA3_TiengViet_Trai_KCQ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UEL\SubReport\XtraReport_BangDiemTNA3_TiengViet_Trai.resx">
+      <DependentUpon>XtraReport_BangDiemTNA3_TiengViet_Trai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UEL\SubReport\XtraReport_GDTC_TiengAnh.resx">
+      <DependentUpon>XtraReport_GDTC_TiengAnh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UEL\SubReport\XtraReport_GDTC_TiengViet.resx">
+      <DependentUpon>XtraReport_GDTC_TiengViet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UEL\XtraReport_BienBanKiemKeTinhSuDungVanBang.resx">
+      <DependentUpon>XtraReport_BienBanKiemKeTinhSuDungVanBang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UEL\XtraReport_ThongKeXepLoaiTotNghiepTheoQuyetDinhDot.resx">
+      <DependentUpon>XtraReport_ThongKeXepLoaiTotNghiepTheoQuyetDinhDot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UEL\XtraReport_ThongKeSLTotNghiepTheoQuyetDinhDot.resx">
+      <DependentUpon>XtraReport_ThongKeSLTotNghiepTheoQuyetDinhDot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UEL\XtraReport_BangDiemTotNghiepAnhVietA3_KCQ.resx">
+      <DependentUpon>XtraReport_BangDiemTotNghiepAnhVietA3_KCQ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UEL\XtraReport_BangDiemTotNghiepAnhVietA3.resx">
+      <DependentUpon>XtraReport_BangDiemTotNghiepAnhVietA3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UEL\XtraReport_BangDiemTotNghiepKCQ_UEL.resx">
+      <DependentUpon>XtraReport_BangDiemTotNghiepKCQ_UEL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UEL\XtraReport_BangDiemXetTotNghiep_UEL.resx">
+      <DependentUpon>XtraReport_BangDiemXetTotNghiep_UEL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UEL\XtraReport_DanhSachCongNhanTN_UEL.resx">
+      <DependentUpon>XtraReport_DanhSachCongNhanTN_UEL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UEL\XtraReport_ThonkeTotNghiep_TheoNganh.resx">
+      <DependentUpon>XtraReport_ThonkeTotNghiep_TheoNganh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UEL\XtraReport_DanhSachCongNhanTN_UEL_KhongXetDaCapQD.resx">
+      <DependentUpon>XtraReport_DanhSachCongNhanTN_UEL_KhongXetDaCapQD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UEL\XtraReport_DanhSachSVKhongDatTN_TheoNganh.resx">
+      <DependentUpon>XtraReport_DanhSachSVKhongDatTN_TheoNganh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UEL\XtraReport_GiayChungNhanTotNghiep_UEL.resx">
+      <DependentUpon>XtraReport_GiayChungNhanTotNghiep_UEL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UEL\XtraReport_SoGocCapBangTN_UEL.resx">
+      <DependentUpon>XtraReport_SoGocCapBangTN_UEL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UEL\XtraReport_Yersin_DanhSachSVKhongDatTN_NhomAV.resx">
+      <DependentUpon>XtraReport_Yersin_DanhSachSVKhongDatTN_NhomAV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UEL\XtraReport_Yersin_DanhSachSVNoSach.resx">
+      <DependentUpon>XtraReport_Yersin_DanhSachSVNoSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UEL\XtraReport_GiayChungNhanHoanThanhKhoaHoc_UEL.resx">
+      <DependentUpon>XtraReport_GiayChungNhanHoanThanhKhoaHoc_UEL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\USSH\XtraReport_USSH_BangDiemNCS_TienSi.resx">
+      <DependentUpon>XtraReport_USSH_BangDiemNCS_TienSi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\USSH\XtraReport_USSH_BangDiemTienSi.resx">
+      <DependentUpon>XtraReport_USSH_BangDiemTienSi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\USSH\XtraReport_USSH_DanhSachSV_DoAnTN.resx">
+      <DependentUpon>XtraReport_USSH_DanhSachSV_DoAnTN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UEL\XtraReport_Yersin_DanhSachSVNoPhi.resx">
+      <DependentUpon>XtraReport_Yersin_DanhSachSVNoPhi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XtraReport_BangDiemTotNghiepDayDu_HCMUP.resx">
+      <DependentUpon>XtraReport_BangDiemTotNghiepDayDu_HCMUP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XtraReport_GiayChungNhanDiem_HCMUP.resx">
+      <DependentUpon>XtraReport_GiayChungNhanDiem_HCMUP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Yersin\XtraReport_BangDiemTotNghiep_HCMUP.resx">
+      <DependentUpon>XtraReport_BangDiemTotNghiep_HCMUP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XtraReport_DanhSachSVDatTN_TheoKhoa.resx">
+      <DependentUpon>XtraReport_DanhSachSVDatTN_TheoKhoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XtraReport_DanhSachSVKhongDatTN_TheoKhoa.resx">
+      <DependentUpon>XtraReport_DanhSachSVKhongDatTN_TheoKhoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XtraReport_Yersin_KQXepLoaiBangTN.resx">
+      <DependentUpon>XtraReport_Yersin_KQXepLoaiBangTN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XtraReport_Yersin_DanhSachCongNhanTN.resx">
+      <DependentUpon>XtraReport_Yersin_DanhSachCongNhanTN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XtraReport_UTE_SoBang.resx">
+      <DependentUpon>XtraReport_UTE_SoBang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Yersin\Sub\SubXtraReport_BangDiemNienChe_2.resx">
+      <DependentUpon>SubXtraReport_BangDiemNienChe_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Yersin\Sub\SubXtraReport_BangDiemNienChe_1.resx">
+      <DependentUpon>SubXtraReport_BangDiemNienChe_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Yersin\XtraReport_BangDiemTotNghiepDayDu_Yersin_NienChe.resx">
+      <DependentUpon>XtraReport_BangDiemTotNghiepDayDu_Yersin_NienChe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Yersin\XtraReport_BangDiemTotNghiepDayDu_Yersin.resx">
+      <DependentUpon>XtraReport_BangDiemTotNghiepDayDu_Yersin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Yersin\XtraReport_Yersin_ThongKePhanLoaiTN_BGD.resx">
+      <DependentUpon>XtraReport_Yersin_ThongKePhanLoaiTN_BGD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Yersin\XtraReport_Yersin_ThongKeKetQuaXetTN.resx">
+      <DependentUpon>XtraReport_Yersin_ThongKeKetQuaXetTN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Yersin\XtraReport_Yersin_GiayChungNhanHoanThanhCTDT.resx">
+      <DependentUpon>XtraReport_Yersin_GiayChungNhanHoanThanhCTDT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Yersin\XtraReport_Yersin_ThongKeSoLuongSVTotNghiep.resx">
+      <DependentUpon>XtraReport_Yersin_ThongKeSoLuongSVTotNghiep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Yersin\XtraReport_Yersin_TieuChuanTotNghiep.resx">
+      <DependentUpon>XtraReport_Yersin_TieuChuanTotNghiep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Yersin\XtraReport_Yersin_GiayChungNhanTN.resx">
+      <DependentUpon>XtraReport_Yersin_GiayChungNhanTN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Yersin\XtraReport_Yersin_DanhSachSVDatTN_TheoKhoa.resx">
+      <DependentUpon>XtraReport_Yersin_DanhSachSVDatTN_TheoKhoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Yersin\XtraReport_Yersin_DanhSachSVKhongDatTN_TheoKhoa.resx">
+      <DependentUpon>XtraReport_Yersin_DanhSachSVKhongDatTN_TheoKhoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Yersin\XtraReport_Yersin_DanhSachSVKhongDatTN.resx">
+      <DependentUpon>XtraReport_Yersin_DanhSachSVKhongDatTN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Yersin\XtraReport_Yersin_DanhSachSVDatTN.resx">
+      <DependentUpon>XtraReport_Yersin_DanhSachSVDatTN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Yersin\XtraReport_Yersin_KetQuaXepLoaiBangTN_NienChe.resx">
+      <DependentUpon>XtraReport_Yersin_KetQuaXepLoaiBangTN_NienChe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Yersin\XtraReport_Yersin_KetQuaXepLoaiBangTN.resx">
+      <DependentUpon>XtraReport_Yersin_KetQuaXepLoaiBangTN.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DataSetReport.xsc">
+      <DependentUpon>DataSetReport.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetReport.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetReport.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetReport.xss">
+      <DependentUpon>DataSetReport.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GrdCore\GrdCore.csproj">
+      <Project>{3b29e214-a338-4925-a249-070f2624bebb}</Project>
+      <Name>GrdCore</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
